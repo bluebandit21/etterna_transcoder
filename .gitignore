@@ -1,0 +1,6 @@
+#Used for holding song packs used for testing -- definitely don't want to commit those! ;)
+testing/
+
+
+#Stupid mac files
+.DS_Store
