@@ -31,7 +31,7 @@ echo "Locating all mp3 files to convert..."
 
 ##Annoying platform-specific behavior... macOS uses -I instead of -i for file
 
-if [[ OSTYPE == "Darwin" ]]
+if [[ $(uname) == "Darwin" ]]
 then
     file_opts="-bI"
 else
