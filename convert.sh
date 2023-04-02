@@ -41,7 +41,7 @@ fi
 mp3_files=()
 while IFS=  read -r -d $'\0'; do
     mp3_files+=("$REPLY")
-done < <(find "$1" -type f -exec bash -c "[[ \$(file ${file_opts} \"{}\") == *audio/mpeg* ]]" \; -print0)
+done < <(find "$1" -type f -exec bash -c "[[ \$(file ${file_opts} \"{}\") == *audio/mpeg* || \$(file -b \"{}\") == *Audio* ]]" \; -print0)
 
 
 convert_and_delete(){
